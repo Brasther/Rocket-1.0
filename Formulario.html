@@ -127,7 +127,7 @@
                 <label for="tipoEnvio" class="form-label">Envio por pagar</label>
                 <input type="checkbox">
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary" onclick="enviarFormulario(event)">Enviar</button>
         </form>
     </div>
 </section>
@@ -199,6 +199,13 @@
     function mostrarFormularioEnvio() {
         document.getElementById('destinatarioFormulario').style.display = 'none';
         document.getElementById('envioFormulario').style.display = 'block';
+    }
+
+    function enviarFormulario(event) {
+        event.preventDefault();
+        
+        alert("El formulario se ha enviado correctamente.");
+        
     }
 </script>
 
